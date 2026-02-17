@@ -1,0 +1,49 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include media(max, 991) {
+    gap: 10px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 16px;
+    @include media(max, 991) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+.contacts-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 24px;
+  background-color: $color-grey-blue;
+  border-radius: 30px;
+  color: #484848;
+
+  &__email {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 100%;
+    text-decoration: underline;
+  }
+  &__phone {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  &__text {
+    font-size: 22px;
+    line-height: 100%;
+  }
+  &__open-hour {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+}

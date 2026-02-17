@@ -1,0 +1,83 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .heading
+        .heading__row
+            .container
+                +breadcrumbs(["Публикации"])
+
+    .page
+      section.section
+        .container
+          .h1.blog-title
+            h1 Публикации
+          .blog__tags-wrapper
+            .blog__tags
+                a.blog__tag.active Все
+                a.blog__tag Молочная промышленность
+                a.blog__tag Мясные технологии
+                a.blog__tag Переработка
+          .blog
+            .blog__wrapper
+              +CardBlog({
+                img: '/img/image-content/blog-1.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-2.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-3.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-1.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-2.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-3.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-1.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-2.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+              +CardBlog({
+                img: '/img/image-content/blog-3.jpg',
+                title: 'Видео с производства',
+                text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                link: '/blog-detail.html'
+              })
+          +button({
+                text: 'Показать еще',
+                class: 'button--white',
+                svgHref: '#icon-arrow-down',
+                svgWidth: '21',
+                svgHeight: '21'
+            })
+          include ../../blocks/pagination/pagination

@@ -1,0 +1,232 @@
+.blog-title.h1 {
+  h1 {
+    font-size: 42px;
+    @include media(max, 767) {
+      font-size: 25px;
+    }
+  }
+}
+.blog {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    @include media(max, 1240) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(max, 767) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 39px;
+    }
+  }
+  &__tags {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    @include media(max, 767) {
+      flex-wrap: nowrap;
+      padding: 0 16px;
+      width: max-content;
+    }
+  }
+  &__tags-wrapper {
+    @include media(max, 767) {
+      overflow-x: auto;
+      margin: 0 -16px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &__tag {
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    border-radius: 50px;
+    border: 1px solid $color-black;
+    transition: color $transition, background-color $transition, border-color $transition;
+    &:hover, &.active {
+      background-color: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+    }
+    @include media(max, 767) {
+        padding: 13px 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+  }
+}
+
+.article {
+  max-width: 813px;
+  width: calc(100% - 439px);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @include media(max, 991) {
+    max-width: 100%;
+    width: 100%;
+  }
+  @include media(max, 767) {
+    gap: 30px;
+  }
+  .banner {
+    height: unset;
+    aspect-ratio: 4 / 3;
+    .banner__media {
+      height: 100%;
+    }
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: #9A9A9A;
+  }
+  &__share {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__social {
+    display: flex;
+    gap: 10px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @include media(max, 767) {
+      gap: 30px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  &__sidebar {
+    width: 407px;
+    position: sticky;
+    top: 150px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 40px;
+
+    @include media(max,991) {
+      width: 100%;
+      position: static;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 140%;
+    &:first-child {
+      font-weight: 500;
+    }
+    @include media(max, 767) {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+  h2 {
+    color: #171717;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 700;
+    margin-bottom: -30px;
+    @include media(max, 767) {
+      margin-bottom: -10px;
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+  figcaption {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+  }
+  ul, ol {
+    margin: -30px 0;
+    font-size: 20px;
+    line-height: 140%;
+    @include media(max, 767) {
+      font-size: 16px;
+      line-height: 120%;
+      margin: -10px 0;
+    }
+  }
+
+  ul + h2,
+  ol + h2 {
+    margin-top: 30px;
+    @include media(max, 767) {
+      margin-top: 10px;
+    }
+  }
+  .table-of-contents {
+    ol {
+      font-size: 14px;
+      margin: 0;
+    }
+
+  }
+
+  img {
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+
+.mention {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+}
+
+.table-of-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background-color: $color-grey-light;
+  border-radius: 30px;
+
+  ol {
+    line-height: 100%;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  @include media(max,991) {
+    width: 100%;
+  }
+}

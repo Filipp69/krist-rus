@@ -1,0 +1,63 @@
+.overlay(data-overlay="")
+
+.modal.modal--callback-manager(data-modal="callback-manager")
+    .modal__close(data-modal-close="")
+      svg(width="24" height="24")
+          use(href="#icon-cross")
+    .modal__container(data-scroll-container="")
+      .modal__thanks-wrapper
+        .modal__consultant-text
+          .modal__title
+            span.h3 Ваша заявка передана консультанту, он скоро с вами свяжется
+          p Если вы не хотите ждать, то можете позвонить или написать ему прямо сейчас
+        .modal__consultant
+          .modal__consultant-info
+            h4.modal__consultant-name Константин Владимирович Олешкин
+            p.modal__consultant-position Ваш консультант
+          button.button.button--primary(
+            type="button"
+            data-phone="+79578885857") +7 (957) 888 58-57
+
+.modal.modal--callback(data-modal="callback")
+    .modal__close(data-modal-close="")
+      svg(width="24" height="24")
+          use(href="#icon-cross")
+    .modal__container(data-scroll-container="" data-form="callback")
+        form.form.invalid(data-validate-modal="" data-form-body="")
+          .modal__descr
+            .modal__title
+              .h3
+                span Оставьте заявку
+            .modal__text
+              p С нами всё сложится.
+                br
+                | Оставьте контакты, и наш менеджер свяжется с вами
+          .inputholder__wrapper
+            .inputholder.form__inputholder
+                input.inputholder__input(type="text" placeholder="Название оргаризации*" data-required="")
+                span.inputholder__error Заполните данные
+            .inputholder.form__inputholder(data-custom-mask="")
+                input.inputholder__input(type="tel" placeholder="+7 (900) 000-00-00" data-required="" data-mask-tel="")
+                span.inputholder__error Заполните данные
+            .inputholder.form__inputholder
+                input.inputholder__input(type="email" placeholder="Email")
+                span.inputholder__error Введите корректный Email
+          include ../policy/policy.pug
+          .form__buttonholder(data-form-trigger="")
+            button.form__button.button.button--primary(disabled="" data-form-button="")
+                span Отправить
+        .modal__thanks(data-form-thanks="")
+          .modal__thanks-wrapper
+            .modal__consultant-text
+              .modal__title
+                span.h3 Ваша заявка передана консультанту, он скоро с вами свяжется
+              p Если вы не хотите ждать, то можете позвонить или написать ему прямо сейчас
+            .modal__consultant
+              .modal__consultant-info
+                h4.modal__consultant-name Константин Владимирович Олешкин
+                p.modal__consultant-position Ваш консультант
+              button.button.button--primary(
+                type="button"
+                data-phone="+79578885857") +7 (957) 888 58-57
+
+

@@ -1,0 +1,39 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  @include media(max, 767) {
+    margin-top: 20px;
+    gap: 8px 0;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 30px;
+    color: #9A9A9A;
+    text-decoration: none;
+    font-size: 14px;
+  	line-height: 120%;
+	a {
+	  color: #9A9A9A;
+    transition: color $transition;
+    &:hover {
+      color: $color-black;
+    }
+	}
+	&::before {
+	  content: '';
+	  position: absolute;
+	  width: 14px;
+	  height: 17px;
+	  top: -1px;
+    right: -23px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='11' viewBox='0 0 12 11' fill='none'><path d='M6.83421 10.1761L6.03734 9.38962L9.31798 6.10898H0.821429V4.97059H9.31798L6.03734 1.7003L6.83421 0.903421L11.4706 5.53978L6.83421 10.1761Z' fill='%239A9A9A'/></svg>") no-repeat center/contain;
+	}
+	&:last-child {
+	  margin-right: 0;
+	  &::before {
+		display: none;
+	  }
+	}
+  }
+}

@@ -1,0 +1,407 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .heading
+        .heading__row
+            .container
+                +breadcrumbs(["О компании"])
+    .page
+      section.section
+        .container
+          .about-banner
+            .banner
+              .banner__content
+                .banner__title.h1.bg-top-left
+                  h1 О компании
+
+              .banner__media
+                img.banner__image(
+                  src="img/image-content/about-1.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+
+                video.banner__video(
+                  autoplay
+                  muted
+                  playsinline
+                  loop
+                  preload="auto"
+                  aria-hidden="true"
+                  style="display:none;")
+                  source(src="img/image-content/banner.mp4" type="video/mp4")
+            .about-banner__descr
+              .about-banner__image-wrapper
+                img(
+                  src="img/image-content/about-2.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+                img(
+                  src="img/image-content/about-3.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+              .about-banner__text
+                p С Креативными Решениями И Стабильными Технологиями мы стремимся быть полезным и выгодным партнёром в поддержке всех направлений пищевой отрасли. Мы видим себя надежным и стабильным партнёром, предлагающим клиентам уникальный инновационный ассортимент и индивидуальный подход.
+                p Мы выстраиваем стратегию лидерства вместе с клиентами, делясь экспертизой в области рынка и технологий, развивая импортозамещение и создавая основу совместного устойчивого финансового роста. Постоянно совершенствуясь, команда КРИСТ, выстраивает свою деятельность на основе открытости, ответственности и соответствия высочайшим мировым стандартам. Мы гордимся тем что мы делаем!
+
+      section.section
+        .container.history
+            .h2
+                h2 История о том, как мы начинали
+            +swiper("swiper-history", "pagination-id", "sliderHistory", true)
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+              .swiper-slide
+                .card-history
+                  .card-history__title
+                    span 2001
+                  .card-history__text
+                    p Создание компании, начало формирования команды специалистов
+
+      section.section
+        .container
+          .banner.banner-video
+            .banner__media
+              img.banner__image(
+                src="img/image-content/banner-video.jpg"
+                alt="Описание баннера"
+                loading="eager")
+              .banner__video-btn(data-modal-open="video-modal")
+                svg(width="100" height="100")
+                  use(href="#icon-video-play")
+            .banner__text.bg-bottom-right
+                p За более, чем 16 лет непрерывной работы на рынке пищевой промышленности, наша компания заслужила сильное доверие своих клиентов и пользуется почетным авторитетом. Мы считаем за честь для себя работать с ведущими предприятиями пищевой промышленности России и стран СНГ. Наша компания ставит перед собой амбициозную цель – с каждым годом увеличивать ассортимент и объем своей продукции и занять лидирующее место на рынке пищевых ингредиентов, и в настоящее время мы делаем уверенные шаги в этом направлении.
+
+        .overlay(data-overlay="")
+        .modal.modal--video(data-modal="video-modal")
+            .modal__close(data-modal-close="")
+              svg(width="24" height="24")
+                  use(href="#icon-cross")
+            video.modal__video(
+                playsinline
+                muted
+                controls
+                loop
+                preload="auto")
+                source(src="img/image-content/banner.mp4" type="video/mp4")
+      section.section
+        .container
+            .h2
+                h2 Мы предлагаем
+            .advantages
+              .adv-card.adv-card--1(style="background-image: url('img/image-content/adv-1.png');")
+                h3.adv-card__title Индивидуальные разработки под конкретные задачи
+              .adv-card.adv-card--2
+                h3.adv-card__title Мобильность наших технологов
+              .adv-card.adv-card--3.adv-card--dark(style="background-image: url('img/image-content/adv-2.png');")
+                h3.adv-card__title Высокую скорость в принятии решений и минимальное время обработки заказов
+              .adv-card.adv-card--4.adv-card--dark
+                h3.adv-card__title Уникальные разработки и эксклюзивные рецептуры
+              .adv-card.adv-card--5
+                h3.adv-card__title Доступность всех наших специалистов 24 часа/ 7 дней в неделю
+              .adv-card.adv-card--6
+                h3.adv-card__title Маркетинговую поддержку и участие в проектах R&D
+            +button({
+              link: true,
+              href: '/catalog-hub.html',
+              text: 'Смотреть каталог',
+              class: 'button--bordered',
+              svgHref: '#icon-catalog-btn-arrow',
+              svgWidth: '22',
+              svgHeight: '10'
+            })
+      section.section
+        .container
+            .about-people
+              .about-people__image
+                img(
+                  src="img/image-content/about-people.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+              .about-people__descr
+                .about-people__title.h3
+                  h2 КРИСТ - это люди
+                .about-people__text
+                  p Мы выстраиваем стратегию лидерства вместе с клиентами, делясь экспертизой в области рынка и технологий, развивая импортозамещение и создавая основу совместного устойчивого финансового роста. Мы видим себя надежным партнером, предлагающим нашим взыскательным клиентам уникальных инновационный ассортимент, индивидуальный подход и молниеносный сервис 24/7. Постоянно совершенствуясь, команда «Крист» выстраивает свою деятельность на основе взаимной открытости, ответственности, безопасности, и соответствия высочайшим мировым стандартам в области качества, в том числе по системе FSSC V6.
+      section.section
+        .container
+            .h2
+                h2 Наша команда
+            +swiper("swiper-team", "pagination-id", "sliderTeam", true)
+              .swiper-slide
+                .card-team(data-modal-open="team-modal")
+                  img.card-team__image(
+                    src="img/image-content/team-1.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-team__btn
+                    svg(width="60" height="60")
+                      use(href="#icon-plus")
+                  .card-team__hidden-text
+                    h2 Заголовок 1
+                    p Мы активно участвуем в международных выставках, чтобы быть в курсе последних тенденций в отрасли и представлять нашу компанию на высоком уровне. Это также даёт нам возможность обмениваться опытом с коллегами из других компаний и находить новых партнёров для сотрудничества.
+              .swiper-slide
+                .card-team(data-modal-open="team-modal")
+                  img.card-team__image(
+                    src="img/image-content/team-1.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-team__btn
+                    svg(width="60" height="60")
+                      use(href="#icon-plus")
+                  .card-team__hidden-text
+                    h2 Заголовок 2
+                    p Мы активно участвуем в международных выставках, чтобы быть в курсе последних тенденций в отрасли и представлять нашу компанию на высоком уровне. Это также даёт нам возможность обмениваться опытом с коллегами из других компаний и находить новых партнёров для сотрудничества.
+              .swiper-slide
+                .card-team(data-modal-open="team-modal")
+                  img.card-team__image(
+                    src="img/image-content/team-1.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-team__btn
+                    svg(width="60" height="60")
+                      use(href="#icon-plus")
+                  .card-team__hidden-text
+                    h2 Заголовок
+                    p Мы активно участвуем в международных выставках, чтобы быть в курсе последних тенденций в отрасли и представлять нашу компанию на высоком уровне. Это также даёт нам возможность обмениваться опытом с коллегами из других компаний и находить новых партнёров для сотрудничества.
+              .swiper-slide
+                .card-team(data-modal-open="team-modal")
+                  img.card-team__image(
+                    src="img/image-content/team-1.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-team__btn
+                    svg(width="60" height="60")
+                      use(href="#icon-plus")
+                  .card-team__hidden-text
+                    h2 Заголовок
+                    p Мы активно участвуем в международных выставках, чтобы быть в курсе последних тенденций в отрасли и представлять нашу компанию на высоком уровне. Это также даёт нам возможность обмениваться опытом с коллегами из других компаний и находить новых партнёров для сотрудничества.
+
+              .swiper-slide
+                .card-team(data-modal-open="team-modal")
+                  img.card-team__image(
+                    src="img/image-content/team-1.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-team__btn
+                    svg(width="60" height="60")
+                      use(href="#icon-plus")
+                .card-team__hidden-text
+                    h2 Заголовок
+                    p Мы активно участвуем в международных выставках, чтобы быть в курсе последних тенденций в отрасли и представлять нашу компанию на высоком уровне. Это также даёт нам возможность обмениваться опытом с коллегами из других компаний и находить новых партнёров для сотрудничества.
+
+            .overlay(data-overlay="")
+            .modal.modal--team(data-modal="team-modal")
+              .modal__close(data-modal-close="")
+                svg(width="24" height="24")
+                    use(href="#icon-cross")
+              .h3
+                h2
+              p
+      section.section
+        .container.slider-no-btns.slider-workers
+            .h2
+                h2 Ключевые сотрудники
+            +swiper("swiper-staff", "pagination-id", "sliderStaff", true)
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-1.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-2.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-1.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-2.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-1.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-2.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-1.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+              .swiper-slide
+                .staff-card
+                  img.staff-card__photo(
+                    src="img/image-content/staff-2.jpg"
+                    alt="Иванов В.А."
+                    loading="lazy")
+                  .staff-card__info
+                    h3.staff-card__name Иванов В.А.
+                    p.staff-card__position Ведущий инженер
+      section.section
+        .container.slider-no-btns
+            .h2
+              h2 Ценности, которые важны для нас
+            +swiper("swiper-blog", "pagination-id", "sliderBlog", true)
+              .swiper-slide
+                .card-value
+                  img.card-value__image(
+                    src="img/image-content/blog-1.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-value__content
+                    .card-value__title
+                      h3 Инновационность
+                    .card-value__text
+                      p Постоянно развиваем новые технологии и внедряем лучшие инженерные практики, чтобы оставаться конкурентоспособными и обеспечивать стабильное качество продукции.
+              .swiper-slide
+                .card-value
+                  img.card-value__image(
+                    src="img/image-content/blog-2.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-value__content
+                    .card-value__title
+                      h3 Клиенториентированность
+                    .card-value__text
+                      p Мы ориентируемся на потребности наших клиентов, прислушиваемся к их мнению и стремимся превзойти ожидания, предоставляя продукцию высокого качества и надежные решения.
+              .swiper-slide
+                .card-value
+                  img.card-value__image(
+                    src="img/image-content/blog-3.jpg"
+                    alt="Описание баннера"
+                    loading="eager")
+                  .card-value__content
+                    .card-value__title
+                      h3 Профессиональная команда
+                    .card-value__text
+                      p Привлекаем талантливых специалистов, создаём условия для профессионального роста и поддерживаем высокий уровень компетенций внутри коллектива.
+      section.section
+        .container
+            .h2
+                h2 Партнёры
+            +swiper("swiper-partners", "pagination-id", "sliderPartners", true)
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-1.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-2.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-3.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-4.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-1.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-2.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-3.png"
+                    alt="Описание баннера"
+                    loading="eager")

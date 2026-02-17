@@ -1,0 +1,115 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .heading
+        .heading__row
+            .container
+                +breadcrumbs(["Каталог", "Мясопереработка"])
+    .page
+      section.section.section-catalog-categories
+        .container
+          .h1
+            h1 Мясопереработка
+          .catalog-categories
+            .catalog-categories__overlay
+            .catalog-categories__sidebar
+              h3.catalog-categories__title Категории
+              svg.catalog-categories__sidebar-close(width="24" height="24")
+                use(href="#icon-cross")
+              .accordion-group(data-accordions-group)
+                .accordion.active
+                  .accordion__toggle(data-accordion-toggle)
+                      .accordion__title
+                          a(href="/") Функциональные добавки на основе гидроколлоидов
+                      .accordion__btn
+                        svg(width="20" height="20")
+                            use(href="#icon-arrow-acc")
+                  .accordion__content(data-accordion-content)
+                      .accordion__content-box
+                          ul.catalog-categories__filters
+                            li
+                              a(href="#") тут ссылка
+                            li
+                              label.checkbox
+                                input.checkbox__input(type="checkbox")
+                                span Если нужен чекбокс возьми этот код
+                            li
+                              a Бесфосфатные смеси
+                            li
+                              a Фосфосодержащие смеси
+                .accordion
+                  .accordion__toggle(data-accordion-toggle)
+                      .accordion__title
+                          a(href="/") Функциональные добавки на основе гидроколлоидов
+                      .accordion__btn
+                        svg(width="20" height="20")
+                            use(href="#icon-arrow-acc")
+                  .accordion__content(data-accordion-content)
+                      .accordion__content-box
+                          ul.catalog-categories__filters
+                            li
+                              a Бесфосфатные смеси для продукции по ГОСТ
+                            li
+                              a Фосфосодержащие смеси для продукции по ГОСТ
+                            li
+                              a Бесфосфатные смеси
+                            li
+                              a Фосфосодержащие смеси
+                .accordion
+                  .accordion__toggle(data-accordion-toggle)
+                      .accordion__title
+                          a(href="/") Функциональные добавки на основе гидроколлоидов
+                      .accordion__btn
+                        svg(width="20" height="20")
+                            use(href="#icon-arrow-acc")
+                  .accordion__content(data-accordion-content)
+                      .accordion__content-box
+                          ul.catalog-categories__filters
+                            li
+                              a Бесфосфатные смеси для продукции по ГОСТ
+                            li
+                              a Фосфосодержащие смеси для продукции по ГОСТ
+                            li
+                              a Бесфосфатные смеси
+                            li
+                              a Фосфосодержащие смеси
+
+            .catalog-categories__content
+              .catalog-categories__search
+                input.inputholder__input.header__search.catalog-categories__search-input(type="text" placeholder="")
+                span.catalog-categories__search-placeholder Поиск по коду для заказа
+                  br.catalog-categories__br
+                  |  или названию
+                svg.header__search-icon(width="22" height="22")
+                  use(href="#icon-search")
+              +button({
+                  button: true,
+                  text: "Категория",
+                  class: "button--primary catalog-categories__btn",
+                  "id": "showCategories"
+                })
+              .catalog-categories__grid
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+                +productCard({name: "Вкусаром Болонская", code: "50041418", link: "/catalog-detail.html"})
+              +button({
+                text: 'Показать еще',
+                class: 'button--white',
+                svgHref: '#icon-arrow-down',
+                svgWidth: '21',
+                svgHeight: '21'
+                })
+              include ../../blocks/pagination/pagination
+

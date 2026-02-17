@@ -1,0 +1,27 @@
+footer.footer(data-lock-scroll)
+  section.section.section--footer
+    .container.footer__container
+      .footer--top
+        .footer__contacts
+          +logo("logo.png")(class="footer__logo")
+          .footer__phone.no-mob
+              a(href="tel:88005554543") 8 800 555-45-43
+          .footer__mail.no-mob
+              a(href="mailto:info@krist.pro") info@krist.pro
+        +nav([
+          { title: "О компании", href: "/about.html" },
+          { title: "Каталог продукции", href: "/catalog-hub.html" },
+          { title: "Публикации", href: "/blog-hub.html" },
+          { title: "Контакты", href: "/contacts.html" },
+        ])(class="footer__nav")
+        .footer__contacts-mob
+          .footer__phone
+              a(href="tel:88005554543") 8 800 555-45-43
+          .footer__mail
+              a(href="mailto:info@krist.pro") info@krist.pro
+        +social
+      .footer--bottom
+        .footer__info
+          .footer__copyright ©2025 | Все права защищены
+          a.footer__privacy(href="/policy.html") Политика конфиденциальности
+

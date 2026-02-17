@@ -1,0 +1,59 @@
+.burger {
+  display: none;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  cursor: pointer;
+  transition: $transition;
+
+  @include hover {
+    color: $color-primary-light;
+  }
+
+  @include media(max, 991) {
+    display: block;
+  }
+
+  span {
+    position: absolute;
+    left: 12px;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $color-primary;
+    transition: transform $transition, opacity $transition, background-color $transition;
+
+    &:nth-child(1) {
+      top: 13px;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 13px;
+    }
+  }
+
+  &--open {
+    span {
+      &:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}
+

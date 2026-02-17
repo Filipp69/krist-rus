@@ -1,0 +1,13 @@
+mixin CardCategories(data)
+  a(href=data.link).card-categories
+    img.card-categories__image(src=data.img, alt=data.title)
+    .card-categories__overlay
+      .card-categories__title.h3
+        h3= data.title
+      .card-categories__text
+        p= data.text
+      .card-categories__btn(href=data.link)
+        svg(width="60" height="60")
+          use(href="#icon-categories-btn")
+
+

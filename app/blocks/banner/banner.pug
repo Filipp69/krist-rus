@@ -1,0 +1,39 @@
+.banner
+
+  .banner__content
+    .banner__title.h1.bg-top-left
+      h1 Комплексные решения для производителей пищевых продуктов
+    p.banner__subtitle.bg-top-left Лучшая продукция из натурального сырья
+
+  .banner__media
+    img.banner__image(
+      src="img/image-content/banner.jpg"
+      alt="Описание баннера"
+      loading="eager")
+
+    video.banner__video(
+      autoplay
+      muted
+      playsinline
+      loop
+      preload="auto"
+      aria-hidden="true"
+      style="display:none;")
+      source(src="img/image-content/banner.mp4" type="video/mp4")
+
+  .banner__buttons.bg-bottom-left
+    +button({
+      button: true,
+      text: "Заказать звонок",
+      class: "button--bordered",
+      "data-modal-open": "callback"
+    })
+    +button({
+      link: true,
+      href: '/catalog',
+      text: 'Скачать каталог',
+      class: 'button--primary',
+      svgHref: '#icon-download',
+      svgWidth: '16',
+      svgHeight: '16'
+    })

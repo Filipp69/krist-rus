@@ -1,0 +1,40 @@
+mixin feedbackForm(data)
+  .feedback
+    .feedback__content
+      .feedback__title.h2
+        h3 Оставьте заявку
+      .feedback__text
+        p С нами всё сложится.
+          br
+          | Оставьте контакты, и наш менеджер свяжется с вами
+    .feedback__form
+      form.form.invalid(data-validate-form="" data-form-body="")
+          .inputholder__wrapper
+            .inputholder.form__inputholder
+                input.inputholder__input(type="text" placeholder="Название оргаризации*" data-required="")
+                span.inputholder__error Заполните данные
+            .inputholder.form__inputholder(data-custom-mask="")
+                input.inputholder__input(type="tel" placeholder="+7 (900) 000-00-00" data-required="" data-mask-tel="")
+                span.inputholder__error Заполните данные
+            .inputholder.form__inputholder
+                input.inputholder__input(type="email" placeholder="Email")
+                span.inputholder__error Введите корректный Email
+          include ../policy/policy.pug
+          .form__buttonholder(data-form-trigger="")
+            button.form__button.button.button--primary(disabled="" data-form-button="" data-modal-open="callback-manger")
+                span Отправить
+    //- button.button.button--primary(data-modal-open="callback-manager")
+    //-             span Отправить
+    if data.requisite
+        .requisites
+          h3.requisites__title Наши реквизиты
+          ul.requisites__list
+            li.requisites__item
+              span.requisites__label ИНН
+              span.requisites__value 7726610030
+            li.requisites__item
+              span.requisites__label КПП
+              span.requisites__value 502401001
+            li.requisites__item
+              span.requisites__label ОГРН
+              span.requisites__value 5087746544749

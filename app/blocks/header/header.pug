@@ -1,0 +1,70 @@
+include ../logo/logo.pug
+include ../nav/nav.pug
+
+header.header(data-lock-scroll)
+  .container.header__container
+    .header--top
+      include ../burger/burger.pug
+      +logo("logo.png")(class="header__logo")
+      +nav([
+        { title: "О компании", href: "/about.html" },
+        { title: "Публикации", href: "/blog-hub.html" },
+        { title: "Контакты", href: "/contacts.html" },
+      ])(class="header__nav")
+      .header__contacts
+        .header__mail
+            a(href="mailto:info@krist.pro") info@krist.pro
+        .header__phone
+            a(href="tel:88005554543") 8 800 555-45-43
+      .header__search-btn
+        svg(width="22" height="22")
+          use(href="#icon-search")
+    .header__gap
+    .header--bottom
+      +button({
+          link: true,
+          href: '/catalog-hub.html',
+          text: 'Каталог продукции',
+          class: 'button--primary header__btn-catalog',
+          svgHref: '#icon-btn-arrow',
+          svgWidth: '8',
+          svgHeight: '14'
+      })
+      .inputholder.header__inputholder-search
+        input.inputholder__input.header__search(type="text" placeholder="Поиск" data-required="")
+        svg.header__search-icon(width="22" height="22")
+          use(href="#icon-search")
+        svg.header__cross-icon(width="22" height="22")
+          use(href="#icon-cross")
+        .search-result
+          .search-result__wrapper.custom-scroll
+            span(style="display: none;") По вашему запросу ничего не найдено
+            a.search-result__item(href="#")
+              .search-result__title Молочная продукция премиального качества
+              .search-result__category Молочная промышленность
+            a.search-result__item(href="#")
+              .search-result__title Молочная продукция премиального качества
+              .search-result__category Молочная промышленность
+            a.search-result__item(href="#")
+              .search-result__title Молочная продукция премиального качества
+              .search-result__category Молочная промышленность
+            a.search-result__item(href="#")
+              .search-result__title Молочная продукция премиального качества
+              .search-result__category Молочная промышленность
+            a.search-result__item(href="#")
+              .search-result__title Молочная продукция премиального качества
+              .search-result__category Молочная промышленность
+      +button({
+          button: true,
+          text: "Заказать звонок",
+          class: "button--bordered header__btn-callback",
+          "data-modal-open": "callback"
+      })
+      .header__social
+        +social
+
+    //- Добавляем меню для мобильной версии
+    .header__menu(data-header-menu)
+
+    .header__overlay
+

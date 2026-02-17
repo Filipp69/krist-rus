@@ -1,0 +1,31 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .heading
+        .heading__row
+            .container
+                +breadcrumbs(["Контакты"])
+    .page
+      section.section
+        .container
+          .h1
+            h1 Контакты
+          .contacts
+            .contacts__wrapper
+              .contacts-card
+                .contacts-card__title.h4
+                  h4 Контакты для связи
+                a.contacts-card__phone(href="tel:88005554543") 8 800 555-45-43
+                a.contacts-card__email(href="mailto:info@krist.pro") info@krist.pro
+              .contacts-card
+                .contacts-card__title.h4
+                  h4 Адрес
+                .contacts-card__text
+                  adress г. Красногорск, Ильинское шоссе, д.1А, помещение 7.4, офис 7.4.6
+                .contacts-card__open-hour
+                  adress Будни: 9-18. Выходные: 12-18
+              .contacts-card
+                .contacts-card__title.h4
+                  h4 Мы онлайн
+                +social
+            +feedbackForm({ requisite: true })

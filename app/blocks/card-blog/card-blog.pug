@@ -1,0 +1,12 @@
+mixin CardBlog(data)
+  a.card-blog(href=data.link)
+    .card-blog__btn
+        svg(width="44" height="44")
+          use(href="#icon-categories-btn")
+    img.card-blog__image(src=data.img, alt=data.title)
+    .card-blog__content
+      .card-blog__title.h3
+        h3= data.title
+      .card-blog__text
+        p= data.text
+

@@ -1,0 +1,38 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .heading
+        .heading__row
+            .container
+                +breadcrumbs(["Каталог"])
+    .page.catalog-page
+      section.section
+        .container
+          .h2
+           h1 Категории продукции
+          .catalog
+            .catalog__card
+              .catalog__header.h3
+                h3 Мясопереработка
+              .catalog__body
+                ul.catalog__list
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Бесфосфатные смеси для продукции по ГОСТ
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Фосфосодержащие смеси для продукции по ГОСТ
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Бесфосфатные смеси
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Фосфосодержащие смеси
+
+            .catalog__card
+              .catalog__header.h3
+                h3 Маринады
+              .catalog__body
+                ul.catalog__list
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Фосфосодержащие смеси для полукопченых и варено-копченых колбас
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Бесфосфатные смеси для варено-копченых, полукопченых и сырокопченых колбас для продукции по ГОСТ
+                  li.catalog__item
+                    a.catalog__link(href="/catalog-categories.html") Бесфосфатные смеси для варено-копченых и полукопченых колбас по ГОСТ

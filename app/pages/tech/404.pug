@@ -1,0 +1,20 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .page
+      section.section.section--not-found
+        img.not-found-bg(src="img/image/404-bg.svg", alt="")
+        .container
+            .h3
+              h3 Страница не найдена
+            .not-found
+              span 4
+              img.not-found-logo(src="img/image/logo-min.png", alt="")
+              span 4
+            .text
+              p К сожалению, такой страницы не су­ществует.
+                br
+                | Попробуйте изменить запрос или перейти на главную страницу.
+            .buttons-wrapper
+                +button({ link: true, text: "На главную", href: "/", class: "button--primary", arrow: true })
+

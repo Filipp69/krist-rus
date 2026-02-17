@@ -1,0 +1,128 @@
+extends ../../template/template.pug
+
+block mainwrapper
+    .heading
+        .heading__row
+            .container
+                +breadcrumbs(["Каталог", "Мясопереработка", "Вкусаром Болонская"])
+    .page.catalog-page
+      section.section
+        .container
+          .catalog__descr-cards
+            .product-card
+              .product-card__text
+                .product-card__title
+                  span Название КПД
+                .product-card__name
+                  h1 Вкусаром Болонская
+              .product-card__text-detail
+                .product-card__text
+                  .product-card__title
+                    span Дозировка
+                  .product-card__code
+                    span 7-9/кг массы
+                .product-card__text
+                  .product-card__title
+                    span Код для заказа
+                  .product-card__code
+                    span 50041418
+              .product-card__btn-wrapper
+                +button({
+                    link: true,
+                    href: '/catalog',
+                    text: 'Скачать каталог',
+                    class: 'button--bordered',
+                    svgHref: '#icon-download',
+                    svgWidth: '16',
+                    svgHeight: '16'
+                  })
+                +button({
+                  button: true,
+                  text: "Уточнить детали",
+                  class: "button--primary",
+                  "data-modal-open": "callback"
+                })
+
+
+            .product-card
+              .product-card__descr
+                .product-card__descr-title.h3
+                  h3 Описание состава
+                .product-card__descr-text
+                  p Вкусоароматическая смесь с молотым черным перцем, молотым чесноком, усилителем вкуса, и ароматизаторами (мясо, смесь перцев)
+
+          .catalog__tags
+            .h2
+              h2 Область применения
+            .catalog__tags-wrapper
+              .catalog__tag Варено-копченые колбасы
+              .catalog__tag Полукопченые колбасы
+              .catalog__tag Сырокопченые кобласы
+      section.section
+        .container
+          .banner.banner-video
+            .banner__media
+              img.banner__image(
+                src="img/image-content/banner-video.jpg"
+                alt="Описание баннера"
+                loading="eager")
+              .banner__video-btn(data-modal-open="video-modal")
+                svg(width="100" height="100")
+                  use(href="#icon-video-play")
+            .banner__text.bg-bottom-right
+                p За более, чем 16 лет непрерывной работы на рынке пищевой промышленности, наша компания заслужила сильное доверие своих клиентов и пользуется почетным авторитетом. Мы считаем за честь для себя работать с ведущими предприятиями пищевой промышленности России и стран СНГ. Наша компания ставит перед собой амбициозную цель – с каждым годом увеличивать ассортимент и объем своей продукции и занять лидирующее место на рынке пищевых ингредиентов, и в настоящее время мы делаем уверенные шаги в этом направлении.
+
+        .overlay(data-overlay="")
+        .modal.modal--video(data-modal="video-modal")
+            .modal__close(data-modal-close="")
+              svg(width="24" height="24")
+                  use(href="#icon-cross")
+            video.modal__video(
+                playsinline
+                muted
+                controls
+                loop
+                preload="auto")
+                source(src="img/image-content/banner.mp4" type="video/mp4")
+      section.section
+        .container.slider-no-btns
+          .h2
+            h2 Продукция из категории
+          +swiper("swiper-products", "pagination-id", "sliderProducts", true)
+              .swiper-slide
+                +productCard({name: "Вкусаром Болонская", code: "50041418"})
+              .swiper-slide
+                +productCard({name: "Вкусаром Болонская", code: "50041418"})
+              .swiper-slide
+                +productCard({name: "Вкусаром Болонская", code: "50041418"})
+              .swiper-slide
+                +productCard({name: "Вкусаром Болонская", code: "50041418"})
+      section.section
+        .container.slider-no-btns
+          .h2
+            h2 Другая наша продукция
+          +swiper("swiper-oter-products", "pagination-id", "sliderOtherProducts", true)
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-1.png',
+                  title: 'Мясопереработка',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-2.png',
+                  title: 'Рыбопереработка',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-3.png',
+                  title: 'Молочная промышленность',
+                  text: 'В молочных продуктах есть все необходимое, что нужно человеку для нормального роста, развития и жизнедеятельности',
+                  link: '/catalog-categories.html'
+                })
+      section.section
+        .container
+          +feedbackForm({ requisite: false })

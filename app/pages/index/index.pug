@@ -1,0 +1,275 @@
+extends ../../template/template.pug
+
+block mainwrapper
+  .page
+    section.section.section--main
+      .container
+        include /blocks/banner/banner
+
+    section.section
+        .container.categories-container
+            .h2
+              h2 Категории продукции
+            +swiper("swiper-сategories", "pagination-id", "sliderCategories", true)
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-1.png',
+                  title: 'Мясопереработка',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-2.png',
+                  title: 'Рыбопереработка',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-3.png',
+                  title: 'Молочная промышленность',
+                  text: 'В молочных продуктах есть все необходимое, что нужно человеку для нормального роста, развития и жизнедеятельности',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-4.png',
+                  title: 'Маринады',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-5.png',
+                  title: 'Консерванты',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-6.png',
+                  title: 'Животный белок и клетчатка',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-7.png',
+                  title: 'Полуфабрикаты и HORECA',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-8.png',
+                  title: 'Наполнители, начинки, соусы',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+              .swiper-slide
+                +CardCategories({
+                  img: '/img/image-content/categories-9.png',
+                  title: 'Мороженое',
+                  text: 'Описание категории, которое появляется при наведении',
+                  link: '/catalog-categories.html'
+                })
+
+    section.section
+      .container
+        .banner.banner-about
+          .banner__content
+            .h2.banner__title.bg-top-left
+              h2 «КРИСТ» — это комплексный подход
+          .banner__text.bg-bottom-right
+              p Мы&nbsp;создаём уникальные решения, основанные на&nbsp;знаниях о&nbsp;рынке, понимании современных технологий и&nbsp;нашем опыте внедрения и&nbsp;разработок.
+          .banner__media
+            img.banner__image(
+              src="img/image-content/banner-2.jpg"
+              alt="Описание баннера"
+              loading="eager")
+
+            video.banner__video(
+              autoplay
+              muted
+              playsinline
+              loop
+              preload="auto"
+              aria-hidden="true"
+              style="display:none;")
+              source(src="img/image-content/banner.mp4" type="video/mp4")
+          +button({
+            link: true,
+            href: '/about.html',
+            class: 'button--white',
+            text: 'Подробнее о компании',
+          })
+
+    section.section
+      .container
+        .h2
+          h2 Почему выбирают Крист
+        .why-choose
+          .why-choose__item
+            .why-choose__number /01
+            .why-choose__title
+              | Глубокие знания современных технологий
+              br
+              | Технологическая экспертиза и R&D
+            .why-choose__text
+              | Постоянно развиваем новые технологии и внедряем лучшие инженерные практики, чтобы оставаться конкурентоспособными и обеспечивать стабильное качество продукции.
+
+          .why-choose__item
+            .why-choose__number /02
+            .why-choose__title
+              | Участие в реализации крупных проектов
+              br
+              | от «идеи до полки»
+            .why-choose__text
+              | Обеспечиваем безопасность персонала на всех этапах производственного процесса, следуя строгим стандартам охраны здоровья и безопасности труда.
+
+          .why-choose__item
+            .why-choose__number /03
+            .why-choose__title
+              | Разработки на основе собственной
+              br
+              | научнотехнологической и производственной базы
+            .why-choose__text
+              | Мы ориентируемся на потребности наших клиентов, прислушиваемся к их мнению и стремимся превосходить ожидания, предоставляя продукцию высокого качества и надёжные решения.
+    section.section
+        .container.slider-no-btns
+            .section-heading
+              .h2
+                h2 Публикации (Медиа)
+              +button({
+                  link: true,
+                  href: '/blog-hub.html',
+                  text: "Смотреть все публикации",
+                  class: "button--bordered no-mob",
+              })
+            +swiper("swiper-blog", "pagination-id", "sliderBlog", true)
+              .swiper-slide
+                +CardBlog({
+                  img: '/img/image-content/blog-1.jpg',
+                  title: 'Видео с производства',
+                  text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                  link: '/blog-detail.html'
+                })
+              .swiper-slide
+                +CardBlog({
+                  img: '/img/image-content/blog-2.jpg',
+                  title: 'Видео с производства',
+                  text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                  link: '/blog-detail.html'
+                })
+              .swiper-slide
+                +CardBlog({
+                  img: '/img/image-content/blog-3.jpg',
+                  title: 'Видео с производства',
+                  text: 'Мясоперерабатывающая промышленность — одна из старейших и крупнейшая отрасль пищевой индустрии',
+                  link: '/blog-detail.html'
+                })
+            +button({
+                  link: true,
+                  href: '/blog-hub.html',
+                  text: "Смотреть все публикации",
+                  class: "button--bordered only-mob",
+              })
+    section.section
+        .container
+            .h2
+                h2 Партнёры
+            +swiper("swiper-partners", "pagination-id", "sliderPartners", true)
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-1.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-2.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-3.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-4.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-1.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-2.png"
+                    alt="Описание баннера"
+                    loading="eager")
+              .swiper-slide
+                .card-partners
+                  img.card-partners__image(
+                    src="img/image-content/partners-3.png"
+                    alt="Описание баннера"
+                    loading="eager")
+    section.section
+      .container
+          .h2
+              h2 Сертификаты
+          +swiper("swiper-certificates", "pagination-id", "sliderCertificates", true)
+            .swiper-slide
+              .card-certificates(data-modal-open="certificates-modal")
+                img.card-certificates__image(
+                  src="img/image-content/certificates-1.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+                h3.card-certificates__name Выписка из реестра от 14.02.2018
+            .swiper-slide
+              .card-certificates(data-modal-open="certificates-modal")
+                img.card-certificates__image(
+                  src="img/image-content/certificates-1.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+                h3.card-certificates__name Выписка из реестра от 14.02.2018
+            .swiper-slide
+              .card-certificates(data-modal-open="certificates-modal")
+                img.card-certificates__image(
+                  src="img/image-content/certificates-1.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+                h3.card-certificates__name Выписка из реестра от 14.02.2018
+            .swiper-slide
+              .card-certificates(data-modal-open="certificates-modal")
+                img.card-certificates__image(
+                  src="img/image-content/certificates-1.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+                h3.card-certificates__name Выписка из реестра от 14.02.2018
+            .swiper-slide
+              .card-certificates(data-modal-open="certificates-modal")
+                img.card-certificates__image(
+                  src="img/image-content/certificates-1.jpg"
+                  alt="Описание баннера"
+                  loading="eager")
+                h3.card-certificates__name Выписка из реестра от 14.02.2018
+          .overlay(data-overlay="")
+          .modal.card-certificates(data-modal="certificates-modal")
+            .modal__close(data-modal-close="")
+              svg(width="24" height="24")
+                  use(href="#icon-cross")
+            img.card-certificates__image
+            h3.card-certificates__name
+
+    section.section
+        .container
+          +feedbackForm({ requisite: false })

@@ -1,0 +1,178 @@
+.why-choose {
+  display: flex;
+  flex-direction: column;
+  @include media(max, 991) {
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 2px solid #D7DEE6;
+    padding: 37px 78px 25px 0;
+    @include media(max, 991) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 0 0 16px 0;
+      border-bottom: 1px solid #D7DEE6;
+    }
+  }
+
+  &__number {
+    width: 90px;
+    font-size: 52px;
+    font-weight: 600;
+    color: #D7DEE6;
+    flex-shrink: 0;
+    @include media(max, 991) {
+      width: 100%;
+    }
+    @include media(max, 767) {
+      font-size: 32px;
+    }
+  }
+
+  &__title {
+    width: 670px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    @include media(max, 991) {
+      width: 100%;
+    }
+    @include media(max, 767) {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    width: 42%;
+    font-size: 18px;
+    line-height: 120%;
+    @include media(max, 991) {
+      width: 100%;
+    }
+    @include media(max, 767) {
+      font-size: 14px;
+    }
+  }
+}
+
+.categories-container {
+  .swiper-button-wrapper {
+    display: none;
+  }
+  .swiper-controls {
+    @include media(min, 880) {
+      display: none;
+    }
+  }
+}
+
+.card-partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-grey-light;
+  height: 229px;
+  padding: 22px 25px;
+  border-radius: 30px;
+
+  img {
+    transition: transform $transition;
+  }
+  @include hover {
+    img {
+      transform: scale(1.05);
+    }
+
+  }
+}
+
+.policy {
+  &__title {
+    text-align: center;
+  }
+}
+
+.card-certificates {
+  background-color: $color-grey-light;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  padding: 50px 32px 32px;
+  cursor: pointer;
+
+  &__image {
+    width: 278px;
+    height: 375px;
+  }
+  &__name {
+    align-self: flex-start;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  &.modal {
+    .card-certificates__image {
+      width: auto;
+      height: 653px;
+      max-height: 60vh;
+      @include media(max, 991) {
+        height: 546px;
+      }
+      @include media(max, 540) {
+        height: 375px;
+      }
+    }
+    &__name {
+      align-self: center;
+    }
+  }
+}
+
+.ya-share2__list.ya-share2__list_direction_horizontal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.article__share .ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item {
+  margin: 0;
+}
+
+.article__share .ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__badge {
+  background-color: #0047BB;
+  width: 40px;
+  height: 40px;
+}
+
+.article__share
+.ya-share2__container_color-scheme_whiteblack
+.ya-share2__item_service_vkontakte
+.ya-share2__icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 13'><path d='M21.8432 11.6562C21.8249 11.7163 21.808 11.7777 21.7884 11.8378C21.6956 12.1356 21.4749 12.3185 21.1626 12.3211C20.0209 12.3276 18.8792 12.3381 17.7388 12.3237C17.1405 12.3159 16.618 12.069 16.1987 11.6484C15.7232 11.1716 15.2817 10.6634 14.8153 10.1775C14.6246 9.97891 14.426 9.78166 14.2039 9.62229C13.7572 9.30224 13.3771 9.40936 13.1171 9.89139C12.8571 10.376 12.8297 10.9077 12.7879 11.4367C12.7383 12.0585 12.5541 12.2545 11.9414 12.3028C9.22692 12.5144 6.94089 11.6327 5.11336 9.60139C3.83972 8.18535 2.83908 6.5799 1.94688 4.90783C1.32377 3.73999 0.763364 2.53949 0.191202 1.34684C-0.102717 0.732873 0.0958413 0.436341 0.784265 0.431116C1.74832 0.424584 2.71237 0.436341 3.67643 0.424584C4.1885 0.418053 4.51769 0.640125 4.70971 1.11039C5.1826 2.27431 5.74562 3.39251 6.43926 4.44148C6.6535 4.76675 6.87818 5.08548 7.11854 5.39247C7.24787 5.55706 7.40724 5.70729 7.57575 5.83139C7.96764 6.12008 8.26287 6.03125 8.42877 5.57012C8.50715 5.35197 8.5594 5.11945 8.58422 4.88954C8.69003 3.88499 8.70048 2.88044 8.53719 1.87981C8.44575 1.31679 8.12701 0.964089 7.56138 0.838683C7.26224 0.773368 7.24526 0.698909 7.43728 0.46508C7.70508 0.142422 8.0421 -0.00257795 8.46143 3.46599e-05C9.5535 0.00656619 10.6456 0.00264727 11.7363 0.00264727C12.4182 0.00264727 12.7291 0.300485 12.7409 0.983683C12.75 1.55715 12.7435 2.13193 12.7435 2.7067C12.7435 3.42256 12.733 4.13841 12.7513 4.85427C12.7566 5.08287 12.8062 5.32193 12.8911 5.53355C13.0897 6.03125 13.475 6.09657 13.8486 5.71512C14.4574 5.09332 14.976 4.39837 15.3757 3.62895C15.812 2.789 16.2091 1.92684 16.6036 1.06467C16.8414 0.546071 16.9994 0.420665 17.5729 0.420665C18.7003 0.420665 19.8276 0.420665 20.9549 0.425891C21.3011 0.427197 21.6329 0.479449 21.8445 0.807332V1.19008C21.4944 2.28085 20.8178 3.18089 20.1463 4.08355C19.6643 4.73148 19.1758 5.37548 18.6976 6.02733C18.0967 6.84508 18.1307 7.18603 18.8622 7.89404C19.3665 8.3826 19.8864 8.85548 20.3697 9.36364C20.9667 9.99328 21.5833 10.619 21.8445 11.4864V11.6562H21.8432Z' fill='%23ffffff'/></svg>");
+  background-repeat: no-repeat;
+}
+
+.article__share
+.ya-share2__container_color-scheme_whiteblack
+.ya-share2__item_service_telegram
+.ya-share2__icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 15'><path d='M16.4654 0.462978C16.4654 0.462978 18.1306 -0.171879 17.9918 1.36992C17.9455 2.00478 17.5293 4.22678 17.2055 6.63019L16.0954 13.7497C16.0954 13.7497 16.0029 14.7926 15.1703 14.974C14.3377 15.1554 13.0889 14.3392 12.8576 14.1578C12.6726 14.0218 9.38863 11.9811 8.23226 10.9835C7.90848 10.7114 7.53845 10.1672 8.27851 9.53238L13.1352 4.9977C13.6902 4.45353 14.2453 3.18381 11.9326 4.72562L5.45705 9.03359C5.45705 9.03359 4.71699 9.48704 3.3294 9.07893L0.322895 8.17199C0.322895 8.17199 -0.787196 7.49179 1.10921 6.81155C5.73459 4.68023 11.4238 2.50357 16.4654 0.462978Z' fill='%23ffffff'/></svg>");
+  background-repeat: no-repeat;
+}
+
+.article__share .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+  background-size: 22px 28px;
+  width: 40px;
+  height: 40px;
+}
+
+.share__box {
+  height: 40px;
+}
